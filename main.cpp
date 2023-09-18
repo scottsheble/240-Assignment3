@@ -7,7 +7,8 @@
 
     Date Due: 9/22/2023
 
-    Purpose: Compiler Training
+    Purpose: This program demonstrates how income tax
+    is applied towards various levels of income.
 
     Created by scott sheble on 8/28/23.
 *********************************************************/
