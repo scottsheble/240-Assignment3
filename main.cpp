@@ -18,13 +18,15 @@
 
 using namespace std;
 
-double grossIncome = 0;
+//double grossIncome = 0;
+double grossIncome = 110000; //test case 1
 double incomeTax = 0;
 
 int main()
 {
-    std::cout << "What is your gross income? ";
-    std::cin >> grossIncome;
+    //std::cout << "What is your gross income? ";
+    std::cout << "What is your gross income? (110000)"; //test case 1
+    //std::cin >> grossIncome;
     if (grossIncome <= 11000)
         incomeTax = (0.1 * 11000);
     else if (grossIncome > 11000 && grossIncome <= 44725)
