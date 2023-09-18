@@ -18,6 +18,16 @@
 
 using namespace std;
 
+const double TAX_BRACKET1 = (0.1);
+const double TAX_BRACKET2 = (0.12);
+const double TAX_BRACKET3 = (0.22);
+const double TAX_BRACKET4 = (0.24);
+
+const double BRACKET_LIMIT1 = (11000);
+const double BRACKET_LIMIT2 = (44725);
+const double BRACKET_LIMIT3 = (95375);
+const double BRACKET_LIMIT4 = (95375);
+
 //double grossIncome = 0;
 double grossIncome = 110000; //test case 1
 double incomeTax = 0;
