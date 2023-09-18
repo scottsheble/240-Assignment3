@@ -29,22 +29,38 @@ const double BRACKET_LIMIT3 = (95375);
 const double BRACKET_LIMIT4 = (95375);
 
 //double grossIncome = 0;
-double grossIncome = 110000; //test case 1
+double grossIncome = (100000.00); //test case 1
 double incomeTax = 0;
+double incomeAboveBracket = 0;
 
 int main()
 {
     //std::cout << "What is your gross income? ";
-    std::cout << "What is your gross income? (110000)"; //test case 1
+    std::cout << "What is your gross income? (test case 1)"; //test case 1
     //std::cin >> grossIncome;
-    if (grossIncome <= 11000)
+    if (grossIncome <= 11000) 
+    {
         incomeTax = (0.1 * 11000);
-    else if (grossIncome > 11000 && grossIncome <= 44725)
-        incomeTax = (0.1 * 11000) + (0.12 * 33725);
+        std::cout << "t1";
+    }
+    else if (grossIncome > 11000 && grossIncome <= 44725) 
+    {
+        incomeAboveBracket = grossIncome - BRACKET_LIMIT1;
+        incomeTax = (0.1 * 11000) + (0.12 * incomeAboveBracket);
+        std::cout << "t2";
+    }
     else if (grossIncome > 44725 && grossIncome <= 95375)
-        incomeTax = (0.1 * 11000) + (0.12 * 33725) + (0.22 * 50650);
+    {
+        incomeAboveBracket = grossIncome - BRACKET_LIMIT2;
+        incomeTax = (0.1 * 11000) + (0.12 * 33725) + (0.22 * incomeAboveBracket);
+        std::cout << "t3";
+    }
     else if (grossIncome > 95375)
-        incomeTax = (0.1 * 11000) + (0.12 * 33725) + (0.22 * 50650) + (0.24 * 4625);
+    {
+        incomeAboveBracket = grossIncome - BRACKET_LIMIT4;
+        incomeTax = (0.1 * 11000) + (0.12 * 33725) + (0.22 * 50650) + (0.24 * incomeAboveBracket);
+        std::cout << "t4";
+    }
         
     std::cout << std::endl;
     std::cout << "Gross Income: " << fixed << setprecision(2) <<  grossIncome << std::endl;
